@@ -1,0 +1,12 @@
+<template name="page_privacy_selector">
+  <div class="control-group">
+    <label class="control-label" for="template">Presentation Privacy</label>
+    <div class="controls">
+      <select class='page-privacy-selector' name="privacy" id="privacy">
+        <option value="public" {{#ifCurrentPagePrivacy "public"}}selected="selected"{{/ifCurrentPagePrivacy}}>Public</option>
+        <option value="registered" {{#ifCurrentPagePrivacy "registered"}}selected="selected"{{/ifCurrentPagePrivacy}}>Registered users only</option>
+        <option value="private" {{#ifCurrentPagePrivacy "private"}}selected="selected"{{/ifCurrentPagePrivacy}}>Private</option>
+      </select>
+    </div>
+  </div>
+</template>

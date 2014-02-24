@@ -1,0 +1,48 @@
+<!-- Template for the presentation sidebar menu 
+  Used by Presentation and Editing views -->
+
+<template name="meny">
+  <div class="meny">
+      <img id="logo" src="/img/presis-by-buorre-logo.png" alt="Presis by Buorre">
+      <div class="btn-group">
+          {{#if isEditMode}}
+            <a class="btn btn-primary btn-small dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class=" icon-edit"></i> Edit mode
+              <span class="caret"></span>
+            </a>
+            {{#if isInRole 'admin'}}
+              <ul class="dropdown-menu">
+                <li><a href="/{{slug}}" > <i class="icon-desktop"></i> Presentation mode</a></li>
+              </ul>
+            {{/if}}
+          {{else}}
+            <a class="btn btn-primary btn-small dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="icon-desktop"></i> Presentation mode
+              <span class="caret"></span>
+            </a>
+            {{#if isInRole 'admin'}}
+            <ul class="dropdown-menu">
+              <li><a href="/{{slug}}/slide-edit" > <i class="icon-edit"></i> Edit mode</a></li>
+            </ul>
+            {{/if}}
+          {{/if}}
+      </div>
+
+      <p>{{getSetting 'siteName'}}</p>
+      <h1>{{title}}</h1>
+
+      <h2><i class="icon-circle-arrow-right"></i> <a href="#share">Share</a></h2>
+      <h2><i class="icon-key"></i> <a href="#permissions">Permissions</a></h2>
+
+      <h2><i class="icon-dashboard"> </i><a href="#">Statics</a></h2>
+      <ul>
+        <li class="small"><a href="#dashboard">Presentation: <i class="icon-eye-open"></i> 740 <i class="icon-time"></i> 20 min</a></li>
+        <li class="small"><a href="#dashboard">Slide: <i class="icon-eye-open"></i> 600 <i class="icon-time"></i>30 s</a></li>
+      </ul>
+
+      <h2><i class="icon-print"></i> <a href="#print">Print</a></h2>
+      <h2 class="close-meny"><i class="icon-remove-circle"></i><a href="#">Close menu</a></h2>
+    </div>
+
+  <div class="meny-arrow"></div>
+</template>

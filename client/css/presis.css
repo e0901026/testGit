@@ -1,0 +1,286 @@
+
+
+
+/*!
+ * Presis
+ */
+
+
+
+html, body { height:100%; min-height: 100%; }
+body {overflow:auto !important; background: #000; color:#fff;font-family:'Soho Gothic W01 Light';}
+h2 {font-family:'Soho Gothic W01 Light'; font-weight: normal;}
+p, label, input, li, textarea, select, table {font-family:'Soho Gothic W01 Light'; font-weight: normal;}
+.container {padding-top: 60px;}
+
+.btn-link {text-shadow: none;}
+
+a {cursor:pointer;}
+.roles i {color:#333 !important;}
+.roles i:hover, .roles i.enabled {color: #049cdb !important; }
+
+.hallotoolbar {margin: 0 auto !important; top:80px !important; left:0 !important; text-align: center; width: 100% !important;}
+.ui-widget {font-size: 0.6em !important;}
+
+::selection {
+    background: #0972a5 !important; 
+    color:#fff !important; 
+    }
+::-moz-selection {
+    background: #0972a5 !important;
+    color:#fff !important;
+}
+
+a.brand {font-family:'Soho Gothic W01 Light'; font-size: 1.5em !important;  margin-top: 2px; font-weight: normal !important; }
+.navbar {border-radius: 0}
+
+
+.navbar .nav > li {line-height: 2em; vertical-align: middle;}
+.navbar .nav > li > a  {line-height: 2em; vertical-align: middle;}
+
+.navbar-inverse .navbar-fixed-top {border-bottom: 1px solid #222; background:#111; }
+
+.navbar .navbar-inner {}
+.navbar .nav > li > a {color:#e5e5e5;}
+.navbar .nav li.dropdown > .dropdown-toggle .caret {border-top-color:#fff !important; border-bottom-color:#fff !important; cursor: pointer;}
+.navbar .nav li.dropdown.open > .dropdown-toggle .caret, .navbar .nav li.dropdown.active > .dropdown-toggle .caret, .navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {border-top-color:#fff;border-bottom-color:#fff;}
+
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover {color: #fff;}
+.navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {background: inherit; color:#fff;}
+
+.block-zone-container {color:#333;}
+.block-zone-container:hover {color:#333;}
+
+.wysiwyg-editor {background-color: transparent !important; border-style: none; 
+    border-color: Transparent !important; 
+    overflow: auto !important;
+max-height: 800px; }
+.page-edit textarea {    border-style: none; 
+    border-color: Transparent; 
+    overflow: auto;  }
+
+    .well {background:transparent; border:none;}
+
+#awwx-go-offline-header-div {display:none;}
+.btn, input {font-family:'Soho Gothic W01 Light';}
+.navbar-fixed-top { font-family:'Soho Gothic W01 Light'; z-index: 999;}
+.navbar .navbar-fixed-top {
+  opacity:0;
+      transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+}
+.navbar .navbar-fixed-top:hover {
+    opacity:1;   
+    transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+}
+
+.navbar .navbar-fixed-top:after {
+    opacity:0;   
+    transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+}
+
+.dropdown-menu label {color: rgb(32, 40, 46);}
+
+[class^="icon-"], [class*=" icon-"]  {padding-right:12px; vertical-align: middle; padding-bottom: 4px;}
+.small [class^="icon-"], .small [class*=" icon-"]  {padding-left:3px;padding-right:3px; vertical-align: middle; padding-bottom: 2px;}
+
+.small a{font-size: 13px;}
+
+#page .container {padding-top: 60px;}
+.footer {display:none;}
+.dropdown-toggle{cursor:pointer;}
+
+h1,h2 {font-family: Soho Gothic W01 Light; font-weight: normal;}
+
+h3, h4, h5, h6 {
+    font-weight: normal;
+    font-family:'Museo Slab W01 900';
+}
+
+
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   speak for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
+
+
+.wrapperloading {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  top: 50%;
+  margin-top: -100px;
+  left: 50%;
+  margin-left: -100px;
+}
+
+.wrapperloading .loading.up {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border-radius: 150px;
+  border: 3px solid #fff;
+  border-top-color: #fff;
+  border-left-color: #555;
+  border-right-color: #555;
+  border-bottom-color: #fff;
+  -webkit-animation: rotation 3s linear infinite;
+  -moz-animation: rotation 3s linear infinite;
+  -o-animation: rotation 3s linear infinite;
+  animation: rotation 3s linear infinite;
+}
+
+.wrapperloading .loading.down {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: 50%;
+  margin-top: -50px;
+  left: 50%;
+  margin-left: -50px;
+  border-radius: 150px;
+  border: 3px solid #fff;
+  border-left-color: #fff;
+  border-top-color: #555;
+  border-bottom-color: #555;
+  border-right-color: #fff;
+  -webkit-animation: rotation 1s linear infinite;
+  -moz-animation: rotation 1s linear infinite;
+  -o-animation: rotation 1s linear infinite;
+  animation: rotation 1s linear infinite;
+}
+
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.ui-dialog {z-index: 999;}
+

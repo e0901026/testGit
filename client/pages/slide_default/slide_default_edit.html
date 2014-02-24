@@ -1,0 +1,25 @@
+
+<template name="slide_default_edit">
+
+  {{#with page}}
+
+  <div class="container page-edit">
+    <div class="row">
+      <div class="span10">
+            <h2>Editing "{{title}}"</h2>
+            <form class="form-horizontal" id="pageEditForm">
+            {{> page_template_selector }}
+            {{> page_privacy_selector}}
+    {{! FIXME: Above should be in a template (but meteor auto-closes opened tags in a template)}}
+    {{! Caution: Don't modify above this line unless you know what you're doing}}
+
+    {{! Page specific fields: Feel free to customize these and add/remove}}
+    {{formHelper value=title type="text" label="Title" fieldName="title" }}
+    {{formHelper value=contents type="wysiwyg" label="Contents" fieldName="contents" }}
+    {{formHelper value=custom_css type="custom_css" label="Custom CSS" fieldName="custom_css" }}
+    {{! End page-specific fields }}
+
+    {{! Caution: Don't modify below this line unless you know what you're doing}}
+    {{> page_edit_bottom}}{{/with}}
+</template>
+

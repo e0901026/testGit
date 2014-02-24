@@ -1,0 +1,45 @@
+<template name="slide_default">
+  {{#with page}}
+<style id="custom_styles">
+  body {background-color:#111; overflow:hidden !important;}
+
+  /* Custom styles for this presentation */
+  {{#parseLess}} {{{custom_css}}} {{/parseLess}}
+</style>
+
+{{> meny}}
+
+<div data-direction="right" class="add-slide add-right noselect">+</div>
+<div data-direction="bottom" class="add-slide add-right noselect">+</div>
+<div class="slide-toolbar">
+  <div class="btn btn-primary attach-image">
+    <i class="icon-picture"></i>Attach image
+  </div>
+  <div class="btn btn-primary duplicate-slide-right">
+    <i class="icon-circle-arrow-right"></i>Duplicate slide
+  </div>
+  <div class="btn btn-primary duplicate-slide-down">
+    <i class="icon-circle-arrow-down"></i>Duplicate slide
+  </div>
+  <div class="btn btn-warning delete-slide">
+    <i class="icon-trash"></i>Delete slide
+  </div>  
+</div>
+  <div class="reveal">
+  <div class="slides" id="slides">
+    {{{contents}}}
+  
+    {{{renderBlocks zone="body"}}}
+  </div>
+</div>
+{{/with}}
+</template>
+
+<template name="form">
+  <form>
+    <input type="file" name="files" multiple />
+    <div>
+      <input type="submit" value="Upload File"/>
+    </div>
+  </form>
+</template>

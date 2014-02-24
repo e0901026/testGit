@@ -1,0 +1,64 @@
+<template name="navigation">
+  <div class="container navigation">
+    <div class="row">
+      <h2>Presentations navigation</h2>
+      <div class="span6">
+        <div class="header-dd dd" id="header_active">
+          {{#if headerNav}}
+            {{#with headerNav}}
+              {{#isolate}}{{>navigation_root}}{{/isolate}}
+            {{/with}}
+          {{else}}
+            <div class="dd-empty">Drag presentations here to add them to navigation.</div>
+          {{/if}}
+        </div>
+      </div>
+      <div class="span6">
+        <div class="header-dd dd" id="header_disabled">
+          {{#if headerNavDisabled}}
+            {{#with headerNavDisabled}}
+              {{#isolate}}{{>navigation_root}}{{/isolate}}
+            {{/with}}
+          {{else}}
+            <div class="dd-empty">Drag presentations here to hide them from navigation.</div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+   
+  </div>
+</template>
+
+<template name="navigation_root">
+  <ol class="dd-list">
+    {{#each this}}
+      {{#if children}}
+        <li class="dd-item" data-slug="{{slug}}" data-title="{{title}}" data-id="{{id}}">
+          <div class="dd-handle">{{title}}</div>
+            {{>navigation_child}}
+        </li>
+      {{else}}
+        <li class="dd-item" data-slug="{{slug}}" data-title="{{title}}" data-id="{{id}}">
+          <div class="dd-handle">{{title}}</div>
+        </li>
+      {{/if}}
+    {{/each}}
+  </ol>
+</template>
+
+<template name="navigation_child">
+  <ol class="dd-list">
+    {{#each children}}
+      {{#if children}}
+        <li class="dd-item" data-slug="{{slug}}" data-title="{{title}}" data-id="{{id}}">
+          <div class="dd-handle">{{title}}</div>
+            {{>navigation_child}}
+        </li>
+      {{else}}
+        <li class="dd-item" data-slug="{{slug}}" data-title="{{title}}" data-id="{{id}}">
+          <div class="dd-handle">{{title}}</div>
+        </li>
+      {{/if}}
+    {{/each}}
+  </ol>
+</template>

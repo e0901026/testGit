@@ -1,0 +1,102 @@
+
+<template name="slide_default_slideedit">
+  {{#with page}}
+<style>
+body {background-color:#111; overflow:hidden !important;}}
+</style>
+
+{{> meny}}
+
+<div data-direction="right" class="add-slide add-right noselect">+</div>
+<div data-direction="bottom" class="add-slide add-right noselect">+</div>
+<div class="slide-toolbar">
+  
+  <!-- Save slide button -->
+  <button class="btn btn-inverse slide-save-changes circle">
+    <span class="icon-save"></span>
+  </button>
+  
+  <!-- Copy / paste slide button -->
+  <button class="btn btn-inverse slide-copy circle">
+    <span class="icon-copy"></span>
+  </button>
+  
+  <button class="btn btn-inverse slide-paste circle">
+    <span class="icon-paste"></span>
+  </button>
+  
+  <!-- Duplicate slide to the right button -->
+  <button class="btn btn-inverse duplicate-slide-right circle">
+    <span class="icon-signin"></span>
+  </button>
+  
+  <!-- Duplicate slide to the bottom button -->
+  <button class="btn btn-inverse duplicate-slide-down circle">
+    <span class="icon-signin"></span>
+  </button>
+  
+  <!-- Delete slide button -->
+  <button class="btn btn-inverse delete-slide circle">
+    <span class="icon-remove"></span>
+  </button>
+</div>
+<div class="toolbar-embed-multimedia">
+  <!-- Upload pic / insert iframe code buttons -->
+  <div class="btn-group">
+    <button type="button" class="btn btn-inverse attach-image" label="Upload picture"><span class="icon-picture"></span></button>
+    <a href="#iframe-modal" role="button" class="btn btn-inverse attach-iframe" data-toggle="modal"><span class="icon-bar-chart"></span></a>
+  </div>
+</div>
+<div class="embedded-image-toolbar">
+  
+  <!-- Edit picture / make background buttons -->
+  <div class="btn-group rounded">
+    <button type="button" class="btn btn-inverse"><span class="icon-picture"></span></button>
+    <button type="button" class="btn btn-inverse image-make-background"><span class="icon-desktop"></span></button>
+  </div>
+  
+  
+  <!-- Resize image / move image buttons -->
+  <div class="btn-group rounded" data-toggle="buttons-checkbox">
+    <button type="button" class="btn btn-inverse image-resize"><span class="icon-resize-full"></span></button>
+    <button type="button" class="btn btn-inverse"><span class="icon-move"></span></button>
+  </div>
+  
+  <!-- Remove image button -->
+  <button class="btn btn-inverse image-delete circle">
+    <span class="icon-trash"></span>
+  </button>
+  
+</div>
+
+<div class="modal hide fade" id="iframe-modal" role="dialog">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3>Insert iframe code</h3>
+  </div>
+  <div class="modal-body">
+    <textarea rows="4" class="iframe-code-area"></textarea>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn" data-dismiss="modal">Close</a>
+    <a href="#" class="btn btn-primary insert-iframe-code" data-dismiss="modal">Insert</a>
+  </div>
+</div>
+
+{{#if offline}}
+  {{> offline_edit}}
+{{else}}
+  <div class="reveal">
+    <!--<div id="slide-frame-overlay">
+    </div>-->
+    
+    <div class="slides" id="slides">
+      {{{contents}}}
+      {{{renderBlocks zone="body"}}}
+    </div>
+  </div>
+{{/if}}
+{{/with}}
+</template>
+
+

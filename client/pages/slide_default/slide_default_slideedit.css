@@ -1,0 +1,218 @@
+/* 
+* Adopting new slides button styles from Kreator.js 
+* http://piatra.jit.su/
+*/
+
+.add-slide {
+  position: absolute;
+  border-radius: 50%;
+  font-size: 26px;
+  line-height: 28px;
+  color: #ddd;
+  cursor: pointer;
+  background: #1b1b1b;
+  padding: 9px 9px 9px 9px;
+  text-shadow: 0 1px 0 #111;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  z-index: 10;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+div[data-direction=right] {
+  right: 25px;
+  top: 46%;
+}
+
+div[data-direction=bottom] {
+  bottom: 3%;
+  left: 48%;
+  z-index: 200;
+}
+
+.noselect {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -ms-user-select: none;
+}
+
+.add-slide:hover {
+  color: #71E9F4;
+  box-shadow: 0 0px 10px #000;
+  -webkit-transform: rotate(90deg);
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+
+div.slide-toolbar {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  z-index: 100;
+  display: none;
+}
+
+div.slide-toolbar div, div.slide-toolbar button {
+  display: block;
+  margin: 10px;
+}
+
+.duplicate-slide-down span.icon-signin {
+-webkit-transform: rotate(90deg);
+-moz-transform: rotate(90deg);
+transform: rotate(90deg);
+margin: -10px 0 -15px -6px;
+}
+
+div.toolbar-embed-multimedia {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  z-index: 200;
+}
+
+a.btn.attach-iframe {
+  height: 25px;
+  width: 18px;
+}
+
+div.embedded-image-toolbar {
+  position: absolute;
+  top: 110px;
+  left: 20px;
+  z-index: 200;
+  display: none;
+}
+
+div.embedded-image-toolbar div {
+  display: block;
+  margin: 5px;
+}
+
+img.embedded-image {
+  width: 250px;
+  height: auto;
+  opacity: 1;
+}
+
+.embedded-image-wrapper {
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+
+img.embedded-image.selected {
+border: 5px dotted yellow;
+border-radius: 10px;
+opacity: 1;
+cursor: move;
+}
+
+
+#slide-frame-overlay {
+  width: 75%;
+  height: 75%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+  background-color: transparent;
+  border: 2px solid #aaa;
+  border-radius: 5px;
+  position: absolute;
+  display: block;
+  z-index: 100;
+}
+
+.reveal div.state-background {
+  /**width: 75%;
+  left: 12.5%;*/
+  background-size: 100%;
+}
+
+.btn-group button.btn {
+  width: 45px;
+  height: 35px;
+}
+
+.btn-group.rounded button.btn:first-child {
+-webkit-border-radius: 30px 0px 0px 30px;
+border-radius: 30px 0px 0px 30px;
+}
+
+.btn-group.rounded button.btn:last-child {
+-webkit-border-radius: 0px 30px 30px 0px;
+border-radius: 0px 30px 30px 0px;
+}
+
+button.btn.circle {
+-webkit-border-radius: 30px 30px 30px 30px;
+border-radius: 30px 30px 30px 30px;
+width: 42px;
+}
+
+/* Fixing Bootstrap outline on focus issue */
+.modal-open .modal,.btn:focus{
+    outline:none!important
+}
+
+.modal textarea.iframe-code-area {
+  width: 98%;
+}
+
+#iframe-modal {
+  max-width: 400px;
+}
+
+section.editable {
+  outline-width: 0;
+}
+
+section.editable.present {
+  vertical-align: middle;
+}
+
+.iframe-embed-container.overlay {
+  z-index: 100;
+}
+
+.iframe-embed-container {
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    cursor: move;
+}
+
+.iframe-embed-container.selected {
+  border: 15px dotted yellow !important;
+}
+
+.iframe-embed-container.selected iframe {
+  opacity: 0.7;
+}
+
+/* Overriding iframe size so we can resize it safely */
+.iframe-embed-container iframe {
+  width: 100% !important;
+  height: 100% !important;
+  margin-top: 5px !important;
+/*  pointer-events: none !important; */
+}
+
+.ui-resizable-helper {
+    border: 10px solid #efefef !important;
+    margin: -10px;
+    top: -400px;
+    left: -400px;
+}
+
+.reveal .slides>section>section.editable.present {
+  padding: 140px 0 20px 0;
+}

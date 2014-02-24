@@ -1,0 +1,101 @@
+/* 
+* Adopting new slides button styles from Kreator.js 
+* http://piatra.jit.su/
+*/
+
+.add-slide {
+  position: absolute;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #ddd;
+  cursor: pointer;
+  background: #1b1b1b;
+  padding: 6px 9px 9px 9px;
+  text-shadow: 0 1px 0 #111;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  z-index: 10;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  font-size: 30px;
+  display: none;
+}
+
+.noselect {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -ms-user-select: none;
+}
+
+.add-slide:hover {
+  color: #71E9F4;
+  box-shadow: 0 0px 10px #000;
+  -webkit-transform: rotate(90deg);
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+
+div.slide-toolbar {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  z-index: 200;
+  display: none;
+}
+
+div.slide-toolbar div {
+  display: block;
+  margin: 5px;
+}
+
+.halloimage-dialog {
+display: none;
+}
+
+/* Fixing text selection color for the slides */
+::selection {
+background: blue;
+}
+
+.ui-resizable { position: relative;}
+.ui-resizable-handle { position: absolute;font-size: 0.1px; display: block; }
+.ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle { display: none; }
+.ui-resizable-n { cursor: n-resize; height: 7px; width: 100%; top: -5px; left: 0; }
+.ui-resizable-s { cursor: s-resize; height: 7px; width: 100%; bottom: -5px; left: 0; }
+.ui-resizable-e { cursor: e-resize; width: 7px; right: -5px; top: 0; height: 100%; }
+.ui-resizable-w { cursor: w-resize; width: 7px; left: -5px; top: 0; height: 100%; }
+.ui-resizable-se { cursor: se-resize; width: 12px; height: 12px; right: 1px; bottom: 1px; }
+.ui-resizable-sw { cursor: sw-resize; width: 9px; height: 9px; left: -5px; bottom: -5px; }
+.ui-resizable-nw { cursor: nw-resize; width: 9px; height: 9px; left: -5px; top: -5px; }
+.ui-resizable-ne { cursor: ne-resize; width: 9px; height: 9px; right: -5px; top: -5px;}
+
+div.state-background.slide-default-gradient {
+  background: rgb(181,189,200); /* Old browsers */
+
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(181,189,200,1) 0%, rgba(130,140,149,1) 36%, rgba(40,52,59,1) 100%); /* FF3.6+ */
+
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(181,189,200,1)), color-stop(36%,rgba(130,140,149,1)), color-stop(100%,rgba(40,52,59,1))); /* Chrome,Safari4+ */
+
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(181,189,200,1) 0%,rgba(130,140,149,1) 36%,rgba(40,52,59,1) 100%); /* Chrome10+,Safari5.1+ */
+
+  background: -o-radial-gradient(center, ellipse cover,  rgba(181,189,200,1) 0%,rgba(130,140,149,1) 36%,rgba(40,52,59,1) 100%); /* Opera 12+ */
+
+  background: -ms-radial-gradient(center, ellipse cover,  rgba(181,189,200,1) 0%,rgba(130,140,149,1) 36%,rgba(40,52,59,1) 100%); /* IE10+ */
+
+  background: radial-gradient(ellipse at center,  rgba(181,189,200,1) 0%,rgba(130,140,149,1) 36%,rgba(40,52,59,1) 100%); /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.background-image-scaled {
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-color: #ccc !important;
+}
+
+.page-edit textarea[name="custom_css"] {
+  height: 100px;
+}
